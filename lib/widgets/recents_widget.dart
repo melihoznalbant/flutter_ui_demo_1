@@ -28,18 +28,18 @@ class RecentsWidget extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomRecentWidget(position: "Sol Üst", imageUrl: ImageData.einstein, widthMultiplier: 0.17, heightMultiplier: 0.27,),
+                CustomRecentWidget(position: "Sol Üst", imageUrl: MessageData().messages[1]["link"].toString(), widthMultiplier: 0.17, heightMultiplier: 0.27,name: MessageData().messages[1]["subject"].toString(), message: MessageData().messages[1]["body"].toString(),),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                CustomRecentWidget(position: "Sol Alt", imageUrl: ImageData.elonMusk, widthMultiplier: 0.17, heightMultiplier: 0.31,),
+                CustomRecentWidget(position: "Sol Alt", imageUrl: MessageData().messages[2]["link"].toString(), widthMultiplier: 0.17, heightMultiplier: 0.31,name: MessageData().messages[2]["subject"].toString(), message: MessageData().messages[2]["body"].toString(),),
               ],
             ),
             SizedBox(width: MediaQuery.of(context).size.height * 0.02),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomRecentWidget(position: "Sağ Üst", imageUrl: ImageData.ataturk, widthMultiplier: 0.21, heightMultiplier: 0.33,),
+                CustomRecentWidget(position: "Sağ Üst", imageUrl: MessageData().messages[0]["link"].toString(), widthMultiplier: 0.21, heightMultiplier: 0.33,name: MessageData().messages[0]["subject"].toString(), message: MessageData().messages[0]["body"].toString(),),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                CustomRecentWidget(position: "Sağ Alt", imageUrl: ImageData.markZuck, widthMultiplier: 0.21, heightMultiplier: 0.25,),
+                CustomRecentWidget(position: "Sağ Alt", imageUrl: MessageData().messages[3]["link"].toString(), widthMultiplier: 0.21, heightMultiplier: 0.25,name: MessageData().messages[3]["subject"].toString(), message: MessageData().messages[3]["body"].toString(),),
               ],
             ),
           ],

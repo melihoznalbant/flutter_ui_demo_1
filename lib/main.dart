@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo_1/pages/home_page.dart';
-import 'package:flutter_ui_demo_1/widgets/messages_widget.dart';
+import 'package:flutter_ui_demo_1/provider.dart';
+import 'package:provider/provider.dart';
+//import 'package:flutter_ui_demo_1/widgets/messages_widget.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => FavoriteModel()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -56,7 +65,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const MyHomePage(),
+      home: const MyHomePage(), 
     );
   }
 }
