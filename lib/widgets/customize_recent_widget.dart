@@ -28,7 +28,7 @@ class _CustomRecentWidgetState extends State<CustomRecentWidget> {
 
   @override
   Widget build(BuildContext context) {
-    bool isFavorited = Provider.of<FavoriteModel>(context).favoriMi(widget.position);
+    //bool isFavorited = Provider.of<FavoriteModel>(context).favoriMi(widget.position);
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () {

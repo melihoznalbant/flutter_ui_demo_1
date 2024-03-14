@@ -15,7 +15,7 @@ class SecondPageAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     bool isFavorited = Provider.of<FavoriteModel>(context).favoriMi(imageUrl);
+     //bool isFavorited = Provider.of<FavoriteModel>(context).favoriMi(imageUrl);
     final size = MediaQuery.of(context).size;
     final textThemeStyle = Theme.of(context).textTheme;
     return Row(
